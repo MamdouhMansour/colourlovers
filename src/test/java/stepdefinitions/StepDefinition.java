@@ -46,7 +46,6 @@ public class StepDefinition {
 	public void testThatNumViewsAreGreaterThan_400(Integer value) {
 		List<String> numViews = XmlPath.from(response.asString()).getList("patterns.pattern.numViews");
 		for (String numView : numViews) {
-			System.out.println(Integer.parseInt(numView));
 			assertTrue((Integer.parseInt(numView)) > value);
 		}
 	}
